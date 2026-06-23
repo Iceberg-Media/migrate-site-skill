@@ -137,7 +137,7 @@ export MIGRATION_MIN_AVAILABLE_MB=512
 export DISPLAY=:99
 
 node /opt/migrate-site/scripts/run-migration.js \
-  "https://example.com client-email=hans@icebergmedia.co.uk"
+  "https://example.com client-email=client@example.com"
 ```
 
 Use `--fast` for smoke tests (skips capture step).
@@ -154,7 +154,7 @@ wrangler --version  # Should be 4.x
 wrangler whoami  # Should show Iceberg Media
 
 # GitHub CLI
-gh auth status  # Should show hansakoch
+gh auth status  # Should show your GitHub account
 
 # Camofox
 curl -s http://127.0.0.1:9377/health  # Should show browserConnected: true
@@ -166,13 +166,13 @@ echo $GITHUB_TOKEN  # Should not be empty
 
 ## Path Configuration
 
-The migration runner expects paths under `/home/openroyleal/`. Create symlinks:
+The migration runner expects paths under a specific home directory. Create symlinks:
 
 ```bash
-sudo mkdir -p /home/openroyleal/migrations
-sudo chown user:user /home/openroyleal
-ln -sf /opt/migrate-site/scripts /home/openroyleal/scripts
-ln -sf /opt/migrate-site/docs/AGENTS.md /home/openroyleal/AGENTS.md
-ln -sf /opt/migrate-site/docs/MIGRATION_RUNBOOK.md /home/openroyleal/MIGRATION_RUNBOOK.md
-ln -sf /opt/migrate-site/docs/MIGRATION_TASTE.md /home/openroyleal/MIGRATION_TASTE.md
+sudo mkdir -p /home/<user>/migrations
+sudo chown <user>:<user> /home/<user>
+ln -sf /opt/migrate-site/scripts /home/<user>/scripts
+ln -sf /opt/migrate-site/docs/AGENTS.md /home/<user>/AGENTS.md
+ln -sf /opt/migrate-site/docs/MIGRATION_RUNBOOK.md /home/<user>/MIGRATION_RUNBOOK.md
+ln -sf /opt/migrate-site/docs/MIGRATION_TASTE.md /home/<user>/MIGRATION_TASTE.md
 ```

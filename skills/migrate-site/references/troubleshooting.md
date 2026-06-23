@@ -6,7 +6,7 @@
 
 **Check logs:**
 ```bash
-cat /home/openroyleal/migrations/<site>/logs/03-capture.log
+cat /home/<user>/migrations/<site>/logs/03-capture.log
 ```
 
 **Common causes:**
@@ -19,7 +19,7 @@ cat /home/openroyleal/migrations/<site>/logs/03-capture.log
 
 **Check logs:**
 ```bash
-cat /home/openroyleal/migrations/<site>/logs/deploy-*.log
+cat /home/<user>/migrations/<site>/logs/deploy-*.log
 ```
 
 **Common causes:**
@@ -78,7 +78,7 @@ wrangler route list --env staging
 
 All migration logs are at:
 ```bash
-/home/openroyleal/migrations/<site>/logs/
+/home/<user>/migrations/<site>/logs/
 ```
 
 Key logs:

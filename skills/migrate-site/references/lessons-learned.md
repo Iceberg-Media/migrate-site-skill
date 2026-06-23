@@ -59,7 +59,7 @@ DISPLAY=:99
 Store these in `/opt/migrate-site/.env` or `~/.env` (never commit). The USB drive's `.env` file has production values pre-configured.
 
 ### Migration Output
-- Workdir: `/home/openroyleal/migrations/examplecom`
-- Staging URL: `examplecom.icebergmedia.co.uk`
+- Workdir: `/home/<user>/migrations/examplecom`
+- Staging URL: `examplecom.<your-domain>.com`
 - Steps passed: staging-dns, preflight, capture, classify, decide-stack, scaffold, setup-auth, prepare-repo, port-layout, port-pages, seo-agent, security-scan, staging-url, build+deploy
 - Final failure: `Could not find zone for example.com` (expected - not a real domain)
