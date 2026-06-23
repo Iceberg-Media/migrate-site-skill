@@ -92,7 +92,7 @@ async function takeScreenshot(url, filename) {
 
 ### If camofox is not running, start it:
 ```bash
-CAMOFOX_PORT=9377 node /home/openroyleal/scripts/start-camofox-headless.mjs &
+CAMOFOX_PORT=9377 node /opt/migrate-site/scripts/start-camofox-headless.mjs &
 ```
 
 ### Comparison workflow:
